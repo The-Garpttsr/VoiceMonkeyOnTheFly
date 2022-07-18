@@ -1,0 +1,26 @@
+Create/paste the following into a script.
+------------------------------------------
+alias: Monkey Talk - FreeForm
+variables:
+  payload_entity: '{{ states(''input_text.monkey_payload'')|lower }}'
+  announcement_entity: '{{ states(''input_select.monkey_announcement'')|lower }}'
+  voice_entity: '{{ states(''input_select.monkey_voice_list'') }}'
+  monkey_entity: '{{ states(''input_select.monkey_list'')|lower }}'
+  monkey_atoken: '{{ states(''input_text.monkey_access_token'')|lower }}'
+  monkey_stoken: '{{ states(''input_text.monkey_secret_token'')|lower }}'
+sequence:
+  - service: rest_command.trigger_monkey
+    data:
+      monkey: '{{monkey_entity}}'
+      trigger: >-
+        https://api.voicemonkey.io/trigger?access_token={{ monkey_atoken
+        }}&secret_token={{ monkey_stoken }}&monkey={{ monkey_entity
+        }}&announcement={{ announcement_entity
+        }}&chime=soundbank%3A%2F%2Fsoundlibrary%2Falarms%2Fbeeps_and_bloops%2Fbell_02&voice={{voice_entity}}
+      announcement: '{{payload_entity}}'
+icon: mdi:pipe-wrench
+description: Engages voicemonkey.io. make sure to set up alexa routines to use this service
+--------------------------------------
+-Keep an eye on the names and types of input. this tripped me up in the beginning.
+-You can get a base url from the playground at voicemonkey.io
+-You can select autio, music, and other elements that are not covered in this repository yet. You replace the items in this code with the variables listed.
