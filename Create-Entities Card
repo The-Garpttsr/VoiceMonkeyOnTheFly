@@ -1,0 +1,16 @@
+Paste the following into an entities card
+-----------------------------------------
+type: entities
+entities:
+  - entity: input_select.monkey_list
+  - entity: input_select.monkey_voice_list
+  - entity: input_text.monkey_secret_token
+  - entity: input_text.monkey_access_token
+  - entity: input_select.monkey_announcement
+  - entity: input_text.monkey_payload
+  - entity: script.1657766685317 <- This is the name of the script you created with the variables.
+show_header_toggle: false
+state_color: true
+title: Monkey on the fly
+
+-----------------------------------------
