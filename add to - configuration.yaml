@@ -1,0 +1,8 @@
+# Voice Monkey Alexa Routine API call
+rest_command:
+  trigger_monkey:
+    url: "{{trigger}}"
+    method: POST
+    verify_ssl: true
+    content_type: "application/json; charset=utf-8"
+    payload: '{"access_token":"[Your Access Token, leave quotes]" ,"secret_token":"[Your Secret Token, leave quotes]","monkey":"{{monkey}}","announcement":"{{announcement}}"}'
