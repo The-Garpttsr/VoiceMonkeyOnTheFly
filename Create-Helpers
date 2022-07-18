@@ -1,0 +1,9 @@
+Create the following helpers:
+Monkey Access Token     input_text.monkey_access_token      Text <-Set as password type of text
+Monkey Announcement     input_select.monkey_announcement    Dropdown <- This is a lead for your action, like "special alert," or "Hey family, "
+Monkey List             input_select.monkey_list            Dropdown <- List of all of the monkeys that you have created on voicemonkey.io
+Monkey Payload          input_text.monkey_payload           Text <- This is what you want it to say. Just leave it text, between 0 and 200 char
+Monkey Secret Token     input_text.monkey_secret_token      Text  <-Set as password type of text
+Monkey Voice List       input_select.monkey_voice_list      Dropdown <- This is a list of voices so you can change the voice on the fly
+
+You can of course change the names, as long as you change everythig accordingly in the script and entities card.
