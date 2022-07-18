@@ -1,0 +1,10 @@
+This will allow you to create a fun and functional way to use Voice Monkey as a TTS to your echo devices.
+
+You need the following:
+1. an amazon account
+2. at least 1 echo device
+3. the alexa media player integration in Home Assistant
+4. Voicemonkey.io account
+5. link the Voicemonkey skill in your alexa account
+
+The code in this repository will allow you to create a card on your dashboard that can be used to trigger text to speech to come out of your echo device.
