@@ -1,0 +1,4 @@
+Before you can have this talk through your Alexa device you need to create an Alexa routine.
+The routine needs to end with the VoiceMonkey skill and be triggered by the monkey (doorbell) that is created by the voicemonkey skill.
+Also you need to disable the doorbell announcement in the routine and/or skill.
+Otherwise it will say "Someone is at the -monkey name- door" before the anouncement. 
